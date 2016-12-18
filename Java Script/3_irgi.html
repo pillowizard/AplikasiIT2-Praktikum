@@ -1,0 +1,129 @@
+<html>
+<head>
+<title> Objek</title>
+</head>
+<body>
+<script languange="JavaScript">
+<!--
+function objek(form)
+{
+	var namastr = (document.form.nama.value);
+	var kotastr = (document.form.kota.value);
+	var alamatstr = (document.form.alamat.value);
+	document.form.znama.value = namastr;
+	document.form.zkota.value = kotastr;
+	document.form.zalamat.value = alamatstr;
+	var ket = "";
+	if (form.jenisk[0].checked == true)
+	{
+		ket = document.form.jenisk[0].value;
+	}
+	else if (form.jenisk[1].checked == true)
+	{
+		ket = document.form.jenisk[1].value;
+	}
+	else if (form.jenisk[2].checked == true)
+	{
+		ket = document.form.jenisk[2].value;
+	}
+	
+	document.form.zjenisk.value = ket;
+
+	var game_1 = "";
+	var game_2 = "";
+	if (form.wow.checked == true)
+	{
+		game_1 = "World of Warcraft";
+	}
+	if (form.css.checked == true)
+	{
+		game_2 = "Counter Strike Source";
+	}
+	
+	if ((form.css.checked == false) && (form.wow.checked == false))
+		document.form.zgame.value = "";
+	else
+		document.form.zgame.value = game_1 + "; " + game_2 +"; ";
+
+}
+//-->
+</script>
+
+<form name="form">
+<table>
+ <tr>
+  <td colspan="3"> <h3>Input </h3></td>
+ </tr>
+ <tr>
+  <td>Nama Lengkap</td>
+  <td>:</td>
+  <td><input type = "text" size = "11" name = "nama"></td>
+ </tr>
+ <tr>
+  <td>Kota asal</td>
+  <td>:</td>
+  <td><input type = "text" size = "25" name = "kota"></td>
+ </tr>
+ <tr>
+  <td>Jenis Kelamin</td>
+  <td>:</td>
+  <td>
+      <input type = "radio" value="Pria" name="jenisk">Pria 
+	  <input type = "radio" value="Wanita" name="jenisk">Wanita
+      <input type = "radio" value="Tidak Terdefinisi" name="jenisk">Lainnya
+  </td>
+ </tr>
+ <tr>
+  <td><b> Game favorit anda adalah</b></td>
+  <td><b>:</b></td>
+  <td> 
+ <input type = "checkbox" value = "World of Warcraft" name ="wow"> World of Warcraft
+ <input type = "checkbox" value = "Counter Strike Source" name ="css"> Counter Strike Source
+  </td>
+ </tr>
+ <Tr>
+  <td>Alamat</td>
+  <td>:</td>
+  <td><textarea rows="3" name="alamat"></textarea></td>
+ </Tr>
+ <tr>
+  <td colspan="3">
+ <input type = "button" value = "kirim" onclick = "objek(this.form)">
+ <input type = "reset" value ="ulang">
+  </td>
+ </tr>
+</table>
+<hr>
+<table>
+ <tr>
+  <td colspan="3"><H3> Output </H3></td>
+ </tr>
+ <tr>
+  <td>Nama Anda adalah</td>
+  <td>:</td>
+  <Td> <input type = "text" size = "11" name = "znama"></Td>
+ </tr>
+ <tr>
+  <td>Anda berasal dari</td>
+  <td>:</td> 
+  <td><input type = "text" size = "25" name = "zkota"> </td>
+ </tr>
+ <tr>
+  <td>Jenis Kelamin anda adalah</td>
+  <td>:</td>
+  <td><input type = "text" size = "25" name = "zjenisk"> </td>
+ </tr>
+ <tr>
+  <td>Game favorit</td>
+  <td>:</td> 
+  <td><input type = "text" size = "25" name = "zgame"> </td>
+ </tr>
+ <Tr>
+  <td>Alamat</td>
+  <td>:</td>
+  <td><textarea rows="3" name="zalamat"></textarea></td>
+ </Tr>
+</table>
+</form>
+</body>
+</html>

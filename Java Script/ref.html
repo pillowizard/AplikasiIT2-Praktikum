@@ -1,0 +1,120 @@
+<head>
+  <title>Mercy gayatri SI 1B</title>
+  <left> <img src="logo.jpg" width = "988" height ="200" alt ="Universitas Sriwijaya" title ="UNSRI" ></img src></left>
+
+  <body>
+    
+  <font color = "Yellow" size ="10" face = "cambria">  <p align = "center"> <b> Registrasi Mahasiswa </font> </p><br/>
+<marquee direction = "left" >
+Selamat Datang di Universitas Sriwijaya !!! Isilah Formulir registrasi ini dengan benar .  &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Selamat Datang di Universitas Sriwijaya !!! Isilah Formulir registrasi ini dengan benar . &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Selamat Datang di Universitas Sriwijaya !!! Isilah Formulir registrasi ini dengan benar . </marquee> 
+<body style="background-color:336666">
+
+  <script type="text/javascript">
+  function cek(){
+    nama=document.getElementById('nama').value;
+  nim=document.getElementById('nim').value;
+        agama=document.getElementById('agama').value;
+    prodi=document.getElementById('prodi').value;
+  email=document.getElementById('email').value;
+   jenis=document.getElementById('jenis').value;
+   alamat=document.getElementById('alamat').value;
+   
+    if(nama==''||nama==null){
+      document.getElementById('e_nama').innerHTML="Harus diisi";
+      return false;
+      }
+   if(nim==''||nim==null){
+      document.getElementById('e_nim').innerHTML="Harus diisi";
+      return false;
+  
+}
+    if(agama=='-'||agama==''||agama==null){
+      document.getElementById('e_agama').innerHTML="Harus diisi";
+      return false;
+       }
+
+    if(prodi=='-'||prodi==''||prodi==null){
+      document.getElementById('e_prodi').innerHTML="Harus diisi";
+      return false;
+       }
+     if(email==''||email==null){
+      document.getElementById('e_email').innerHTML="Harus diisi";
+      return false;
+      }
+    if(jenis=='-'||jenis==''||jenis==null){
+      document.getElementById('e_jenis').innerHTML="Harus diisi";
+      return false;
+       }
+    if(alamat==''||alamat==null){
+      document.getElementById('e_alamat').innerHTML="Harus diisi";
+      return false;
+      }
+  
+    if(nama!=''&& nim!=''&& agama!='-'&& prodi!='-'&& email!=''&& jenis!='-' && alamat!='') {
+      document.getElementById('Hasil').innerHTML="Nama="+nama+"<br>Nim="+nim+"<br>Agama="+agama+"<br>Prodi="+prodi+"<br>Email="+email+"<br>Jenis_Kelamin="+jenis+"<br>Alamat="+alamat;
+      return false;
+    }
+    }
+      </script>
+</head>
+
+<body>
+ <form id="latihan" onsubmit="return cek();">
+<table>
+
+ <tr>
+ <td> Nama </td>
+<td> <input type="text" id="nama"></td> 
+<td> <div id="e_nama"></div></td></tr><br>
+
+    <tr><td>Nim</td>
+<td><input type="text" id="nim"></td>
+       <td> <div id="e_nim"></div> </td>  </tr><br>
+ 
+
+<tr>
+<td> Agama</td> 
+<td> <select id="agama">
+ <option value = "-pilih-" /> pilih 
+  <option value = "Islam" /> Islam 
+  <option value = "Kristen" /> Kristen
+   <option value = "Katolik" /> Katolik 
+    <option value = "Budha" /> Budha
+  <option value = "Hindu" /> Hindu </select>
+  <div id="e_agama"></div></td></tr><br>
+<tr> <td>Prodi </td>
+<td> <select id="prodi">
+        <option value="-">-Pilih Prodi-</option>
+        <option value="1">Sistem Informasi</option>
+        <option value="2">Teknik Informatika</option>
+   <option value="3">Manajemen Informatika</option>
+    <option value="4">Sistem Informatika</option>
+     <option value="5">Teknik Komputer</option></td>
+        </select>
+        <td><div id="e_prodi"></div></td> </tr><br>
+  
+  <tr><td>Email </td>
+  <td><input type="text" id="email"></td>
+  <td><div id="e_email"></div></td></tr><br>
+  
+  <tr><td>Jenis Kelamin </td>
+  <td><select id="jenis">
+  <option value="-">-pilih-</option>
+  <option value="L">Laki-laki</option>
+  <option value="P">Perempuan</option></td>
+  </select> 
+  <td><div id="e_jenis"></div></td></tr><br>
+  
+ <tr><td>Alamat</td>
+<td> <textarea id="alamat" cols="15" rows="5"></textarea></td>
+<td> <div id="e_alamat"></div> </td></tr> <br>
+
+ <tr>
+<td><input type="submit" value="Ok"></td></tr>
+<tr><td> <p id="Hasil">Silahkan diisi Form di atas</p></td> </tr> 
+ </form>
+
+</table>
+</body>
+
+</html>

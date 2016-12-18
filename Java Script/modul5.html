@@ -1,0 +1,41 @@
+<html>
+  <head>
+    <title>Perulangan Do-While </title>
+  </head>
+  <body>
+    <script language = "javascript">
+    <!--
+    function pw()
+    {
+      var masuk = 0;
+      do
+      {
+        pass = prompt("Tuliskan password dengan benar","");
+        if (pass == "unikom")
+        {
+          alert("Password benar, klik 'OK' untuk masuk ke Blog saya.");
+          window.open("www.pytbyt.co.cc");
+          break;
+        }
+        else
+        {
+          alert("Password salah! Ulangi lagi.");
+        }
+        if (masuk == 2)
+        {
+          alert("maaf, kesempatan anda hanya3 kali");
+          history.go(-1);
+        }
+        masuk = masuk + 1;
+      }
+      while (masuk <= 2)
+    }
+    //-->
+    </script>
+    <form method = "post">
+      <h3> Contoh Perulangan Do-While </h3>
+      <p> Silahkan masukan password untuk membuka Blog saya. </p>
+      <p> <input type ="button" value = "Password" onclick = "pw()"> </p>
+    </form>
+  </body>
+</html>

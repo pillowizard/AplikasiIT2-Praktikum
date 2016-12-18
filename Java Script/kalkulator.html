@@ -1,0 +1,68 @@
+<html>
+	<head>
+		<title>Kalkulator</title>
+	</head>
+	<body bgcolor="#bec3c7">
+		<script language="JavaScript">
+			function hitung()
+			{
+				var x=eval(fform.x.value);
+				var y=eval(fform.y.value);
+				var pil= fform.opt.value;
+				if (pil == "tambah")
+				{
+					var z = x + y;
+			 	}
+			 	else if (pil == "kurang")
+			 	{
+					var z = x - y;
+			 	}
+			 	else if (pil == "kali")
+			 	{
+					var z = x * y;
+			 	}
+			 	else if (pil == "bagi")
+			 	{
+					var z = x / y;
+			 	}
+			 	fform.hasil.value = z;
+			 	fform.x.value = "";
+			 	fform.y.value = "";
+			}
+		</script>
+		<form name="fform">
+			<table align="center">
+				<tr>
+					<td colspan="2" align="center">
+						<font size="5"><b>Kalkulator</b></font><hr>
+					</td>
+				</tr>
+				<tr>
+					<td width="100">Bilangan 1</td>
+					<td><input type="text" name="x"></td>
+				</tr>
+				<tr>
+					<td>Bilangan 2</td>
+					<td><input type="text" name="y"></td>
+				</tr>
+				<tr>
+					<td>Hasil</td>
+					<td><input type="text" name="hasil" disabled="true"></td>
+				</tr>
+				<tr>
+					<td>Operator</td>
+					<td>
+						<select name="opt"></p>
+							<option value="tambah"> + </option>
+							<option value="kurang"> - </option>
+							<option value="kali"> * </option>
+							<option value="bagi"> / </option>
+						</select>
+						<input type="button" value="=" onClick="hitung()" />
+						<input type="reset" value="AC"/>
+					</td>
+				</tr>
+			</table>
+		</form>
+	</body>
+</html>

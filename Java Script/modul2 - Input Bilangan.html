@@ -1,0 +1,50 @@
+<html>
+	<head>
+		<title>Input Bilangan</title>
+	</head>
+	<body bgcolor="#bec3c7">
+		<script language="JavaScript">
+			<!--
+			function jumlah()
+			{
+				var bil1 = parseFloat(document.fform.bilangan1.value);
+				if(isNaN(bil1))
+					bil1=0.0;
+
+				var bil2 = parseFloat(document.fform.bilangan2.value);
+				if(isNaN(bil2))
+					bil2=0.0;
+
+				var hasil = bil1 + bil2;
+				alert("Hasil Penjumlahan = " + hasil);
+			}
+			//-->
+		</script>
+		<form name="fform">
+			<table align="center">
+				<tr>
+					<td colspan="3" align="center">
+						<h2>Penjumlahan</h2><hr>
+					</td>
+				</tr>
+				<tr>
+					<td width="150">Bilangan Pertama</td>
+					<td>:</td>
+					<td><input type="text" size="10" name="bilangan1"></td>
+				</tr>
+				<tr>
+					<td>Bilangan Kedua</td>
+					<td>:</td>
+					<td><input type="text" size="10" name="bilangan2"></td>
+				</tr>
+				<tr>
+					<td colspan="3" align="center">
+					<hr>
+						<input type="button" value="Jumlahkan" onclick="jumlah()">
+						<input type="reset" value="Ulang">
+					</td>
+				</tr>
+			</table>
+		</form>
+	</body>
+</html>

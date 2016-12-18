@@ -1,0 +1,13 @@
+document.writeln("<center>");
+document.writeln("<font face='Segoe UI' color=white>");
+document.writeln("<hr witdh=600 color=white>");
+document.writeln("<h2>DATA DIRI</h2>");
+document.writeln("<hr witdh=600 color=white>");
+document.writeln("<h3>Nama   : Agung Budi Pangestu</h3>");
+document.writeln("<h3>NIM   : 10115412</h3>");
+document.writeln("<h3>Jurusan : Teknik Informatika</h3>");
+document.writeln("<h3>Tmpt, Tgl Lahir : Subang, 18 Mei 1997</h3>");
+document.writeln("<h3>Jenis Kelamin  : Laki-Laki</h3>");
+document.writeln("<h3>Alamat  : Jl. Tubagus Ismail Bawah No.36</h3>");
+document.writeln("<hr witdh=600 color=white");
+document.writeln("</center>");

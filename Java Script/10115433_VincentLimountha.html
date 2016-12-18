@@ -1,0 +1,241 @@
+<html>
+	<head>
+		<title>MuhammadRisalAdam_10115156_UTS</title>
+		<script language="javascript">
+			window.onload = function(){
+				var TipeKamarA = ["Pilih Tipe","Standar","Superior","Deluxe","Junior","Suite","President"];
+				var TipeKamar = document.getElementById("kamar");
+				for (i=0;i<TipeKamarA.length;i++){
+					var Entry = document.createElement("option");
+					Entry.text = TipeKamarA[i];
+					Entry.value = TipeKamarA[i];
+					TipeKamar.add(Entry ,null);
+				}
+			}
+			
+			function hitung(){
+				var tkamar = document.getElementById("kamar").value;
+				var total=0;
+				var jmlkamar = document.getElementById("jmlkamar").value;
+				var lama = document.getElementById("lama").value;
+				
+				if(tkamar=="Pilih Tipe")
+				{
+					alert("Silahkan Pilih Tipe Kamar");
+				}
+				else if(tkamar=="Standar")
+				{
+					var hKamar=150000;
+				}
+				else if(tkamar=="Superior")
+				{
+					var hKamar=200000;
+				}
+				else if(tkamar=="Deluxe")
+				{
+					var hKamar=250000;
+				}
+				else if(tkamar=="Junior")
+				{
+					var hKamar=100000;
+				}
+				else if(tkamar=="Suite")
+				{
+					var hKamar=300000;
+				}
+				else if(tkamar=="President")
+				{
+					var hKamar=350000;
+				}
+				
+				if(document.getElementById("single").checked)
+				{
+					var hjmlranjang=50000;
+				}
+				else if(document.getElementById("double").checked)
+				{ 
+					var hjmlranjang=100000;
+				}
+				if(document.getElementById("twin").checked)
+				{
+					var hjmlranjang=150000;
+				}
+				if(document.getElementById("triple").checked)
+				{
+					var hjmlranjang=200000;
+				}
+				
+				if(document.getElementById("tv").checked)
+				{
+					var t1=300000;
+				}
+				else
+				{
+					var t1=0;
+				}
+				if(document.getElementById("wifi").checked)
+				{
+					var t2=200000;
+				}
+				else
+				{
+					var t2=0;
+				}
+				if(document.getElementById("games").checked)
+				{
+					var t3=100000;
+				}
+				else
+				{
+					var t3=0;
+				}
+				var fasilitas=t1+t2+t3;
+				var total=(hKamar+hjmlranjang+fasilitas)*jmlkamar*lama;
+				document.getElementById("total").value=total;
+			}
+			
+			function proses(){
+				var nama = document.getElementById("nama").value;
+				var nohp = document.getElementById("nohp").value;
+				var alamat = document.getElementById("alamat").value;
+				var kamar = document.getElementById("kamar").value;
+				var lama = document.getElementById("lama").value;
+				var total = document.getElementById("total").value;
+				
+				if(document.getElementById("single").checked)
+				{
+					var vJmlRanjang="Single";
+				}
+				else if(document.getElementById("double").checked)
+				{ 
+					var vJmlRanjang="Double";
+				}
+				if(document.getElementById("twin").checked)
+				{
+					var vJmlRanjang="Twin";
+				}
+				if(document.getElementById("triple").checked)
+				{
+					var vJmlRanjang="Triple";
+				}
+				
+				if(document.getElementById("tv").checked)
+				{
+					var t1="TV Kabel";
+				}
+				else
+				{
+					var t1="";
+				}
+				if(document.getElementById("wifi").checked)
+				{
+					var t2="Wifi";
+				}
+				else
+				{
+					var t2="";
+				}
+				if(document.getElementById("games").checked)
+				{
+					var t3="Games";
+				}
+				else
+				{
+					var t3="";
+				}
+				
+				document.getElementById("pjudul").innerHTML="<h1><center>Hasil Reservasi</center></h1>";
+				document.getElementById("pnama").innerHTML="Nama : " +nama;
+				document.getElementById("pnohp").innerHTML="No HP : " +nohp;
+				document.getElementById("palamat").innerHTML="Alamat : " +alamat;
+				document.getElementById("pjmlranjang").innerHTML="Jumlah Ranjang : " +vJmlRanjang;
+				document.getElementById("ptambahan").innerHTML="Tambahan : " +t1+ " " +t2+ " " +t3;
+				document.getElementById("plama").innerHTML="Lama Menginap : " +lama+ " Hari";
+				document.getElementById("ptotal").innerHTML="Total Harga : Rp" +total;
+			}
+			
+			
+			
+		</script>
+	</head>
+	<body>
+		<center>
+			<h2>Reservasi Hotel Grand Paradiso</h2>
+		</center>
+		<table>
+			<tr>
+				<td>Nama*</td>
+				<td>:</td>
+				<td><input type="text" id="nama" required></td>
+			</tr>
+			<tr>
+				<td>No HP*</td>
+				<td>:</td>
+				<td><input type="text" id="nohp" required></td>
+			</tr>
+			<tr>
+				<td>Alamat*</td>
+				<td>:</td>
+				<td><textarea id="alamat" required></textarea></td>
+			</tr>
+			<tr>
+				<td>Tipe Kamar*</td>
+				<td>:</td>
+				<td><select id="kamar" required></select></td>
+			</tr>
+			<tr>
+				<td valign="top">Jumlah Ranjang</td>
+				<td valign="top">:</td>
+				<td valign="top">
+					<input type="radio" id="single" name="ranjang" value="Single">Single<br>
+					<input type="radio" id="double" name="ranjang" value="Double">Double<br>
+					<input type="radio" id="twin" name="ranjang" value="Twin">Twin<br>
+					<input type="radio" id="triple" name="ranjang" value="Triple">Triple
+				</td>
+			</tr>
+			<tr>
+				<td valign="top">Fasilitas Tambahan</td>
+				<td valign="top">:</td>
+				<td valign="top">
+					<input type="checkbox" id="tv" name="fasilitas" value="TV Kabel">TV Kabel<br>
+					<input type="checkbox" id="wifi" name="fasilitas" value="Wifi">Wifi<br>
+					<input type="checkbox" id="games" name="fasilitas" value="Games">Games
+				</td>
+			</tr>
+			<tr>
+				<td>Jumlah Pesanan Kamar*</td>
+				<td>:</td>
+				<td><input type="text" id="jmlkamar" required></td>
+			</tr>
+			<tr>
+				<td>Lama Menginap*</td>
+				<td>:</td>
+				<td><input type="text" id="lama" required>Per Hari</td>
+			</tr>
+			<tr>
+				<td>Total Harga*</td>
+				<td>:</td>
+				<td><input type="text" id="total" required></td>
+			</tr>
+			<tr>
+				<td></td>
+				<td></td>
+				<td>
+					<button onclick="hitung()" value="Hitung">Hitung</button>
+					<button onclick="proses()" value="Proses">Proses</button>
+				</td>
+			</tr>
+		</table>
+		
+		<p id="pjudul"></p>
+		<p id="pnama"></p>
+		<p id="pnohp"></p>
+		<p id="palamat"></p>
+		<p id="pkamar"></p>
+		<p id="pjmlranjang"></p>
+		<p id="ptambahan"></p>
+		<p id="pjmlkamar"></p>
+		<p id="plama"></p>
+		<p id="ptotal"></p>
+	</body>
+</html>

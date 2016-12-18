@@ -1,0 +1,108 @@
+<html>
+	<head>
+		<title>Validasi Menggunakan Java Script</title>
+		<style type="text/css">
+			#kotak
+			{
+				background-color: #ffffff; padding: 20px; width: 600px; margin: auto;
+			}
+			#form
+			{
+				background-color: #232a3d; padding: 20px;
+			}
+			#form p
+			{
+				color: #ffffff;
+			}
+		</style>
+		<script type="text/javascript"> 
+			function Validasi()
+			{
+				var angka = "0123456789";
+				var x = 0;
+				var kodepos=document.getElementById('kodepos').value;
+				var email=document.getElementById('email').value;
+				var notelepon=document.getElementById('notelepon').value;
+				if (email=="" || kodepos=="" || notelepon =="")
+				{ 
+					alert("Ada form yang belum terisi");
+				}
+				if ((email.indexOf('@',0)==-1) || (email.indexOf('.',0)==-1))
+				{ 
+					alert("Email Kurang Tepat");  
+				}
+				if (kodepos.length!=5)
+				{
+					alert("kode pos harus 5 karakter"); 
+					return false; 
+				} 
+				if (notelepon.length!=12)
+				{ 
+					alert("no telepon harus 12 karakter"); return false;
+				} 
+				for (var i=0; i < kodepos||notelepon.length; i++) 
+				{ 
+					digita = "" + kodepos.substring(i, i+1); digitb = "" + notelepon.substring(i, i+1);
+					if (angka.indexOf(digita) == "-1")
+					{ 
+						window.alert("Karakter pada Kode POs yang dimasukkan salah (harus angka semua)"); 
+						return false;
+					}
+					if (angka.indexOf(digitb) == "-1")
+					{ 
+						window.alert("Karakter pada No Telepon yang dimasukkan salah (harus angka semua)");
+						return false;
+					}
+				}
+				return true;
+			} 
+		</script>
+	</head>
+	<body> 
+		<div id="kotak">
+			<div id="form">
+				<form method="post" onsubmit="return Validasi();">
+					<table align="center"> 
+						<tr> 
+							<td align="left">
+								<p><b>Email</b></p>
+							</td> 
+							<td>
+								<p><b>:</b></p></td>
+							<td align="left">
+								<input type="text" size="30" id="email">
+							</td>  
+						</tr> 
+						<tr>
+							<td align="left">
+								<p><b>Kode Pos</b></p>
+							</td> 
+							<td><p><b>:</b></p></td>
+							<td align="left">
+								<input type="text" id="kodepos">
+							</td>  
+						</tr> 
+						<tr> 
+							<td align="left">
+								<p><b>No. Telepon</b></p>
+							</td>
+							<td>
+								<p><b>:</b></p>
+							</td> 
+							<td align="left">
+								<input type="text" id="notelepon">
+							</td> 
+						</tr>
+						<tr>
+							<td></td>
+							<td></td>
+							<td>
+								<input type="submit" name="submit" value="Kirim">
+							</td>
+						</tr>
+					</form>
+				</table>
+			</div>
+		</div>
+	</body>
+</html>

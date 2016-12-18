@@ -1,0 +1,146 @@
+<html>
+  <head>
+    <title>JavaScript</title>
+  </head>
+  <body>
+    <script language="JavaSCript">
+      function input()
+      {
+        var namastr    = (document.fform.nama.value);
+        var kotastr    = (document.fform.kota.value);
+        var jurusanstr = (document.fform.jurusan.value); 
+        var ketstr     = (document.fform.ket.value); 
+  
+        //text
+        (document.fform.znama.value) = namastr;
+        (document.fform.zkota.value) = kotastr;
+ 
+        //radio 
+        if(fform.pria.checked)
+        {
+          pria = (document.fform.pria.value); 
+          (document.fform.zjenis.value) = pria;
+        }
+        else
+        {
+          wanita = (document.fform.wanita.value); 
+          (document.fform.zjenis.value) = wanita;
+        }
+   
+        //checkbox  
+        if(fform.wow.checked==true)
+        {
+          wow = (document.fform.wow.value); 
+          (document.fform.zgame.value) = wow;
+        }
+        if(fform.css.checked==true)
+        {
+          css = (document.fform.css.value); 
+          (document.fform.zgame.value) = css;
+        }
+   
+        //select
+        (document.fform.zjurusan.value) = jurusanstr;
+ 
+        //textarea
+        (document.fform.zket.value) = ketstr;
+      }  
+    </script>
+    <center><h1>DATA DIRI</h1></center>
+    <hr>
+    <form name = "fform">
+      <table width="40%" align="center">
+        <tr>
+          <td width="150">Nama Lengkap</td>
+          <td>:</td>
+          <td><input type ="text" name="nama" ></td>
+        </tr>
+        <tr>
+          <td>Kota Asal</td>
+          <td>:</td>
+          <td><input type ="text" name="kota" ></td>
+        </tr>
+        <tr>
+          <td>Jenis Kelamin</td>
+          <td>:</td>
+          <td>
+            <input type = "radio" name="jenis" id="pria" value="Pria">Pria
+            <input type = "radio" name="jenis" id="wanita" value="Wanita">Wanita
+          </td>
+        </tr>
+        <tr>
+          <td>Game Favorite</td>
+          <td>:</td>
+          <td>
+            <input type ="checkbox" name="wow" value="World of Warcraft">World of Warcraft
+            <input type ="checkbox" name="css" value="Counter Strike Source">Counter Strike Source
+          </td>
+        </tr>
+        <tr>
+          <td>Jurusan</td>
+          <td>:</td>
+          <td>
+            <select size=1 name="jurusan">
+              <option value="" selected>--Silahkan Pilih--</option>
+              <option value="Teknik Informatika">Teknik Informatika</option>
+              <option value="Manajemen Informatika">Manajemen Informatika</option>
+              <option value="Teknik Komputer">Teknik Komputer</option>
+              <option value="Teknik Industri">Teknik Industri</option>
+              <option value="Teknik Elektro">Teknik Elektro</option>
+              <option value="Teknik Sipil">Teknik Sipil</option>
+              <option value="Teknik Arsitektur">Teknik Arsitektur</option>
+              <option value="Teknik Perencanaan Wil. Kota">Teknik Perencanaan Wil. Kota</option>
+            </select>
+          </td>
+        </tr>
+        <tr valign="top">
+          <td>Keterangan</td>
+          <td>:</td>
+          <td><textarea cols=40 rows=5 name="ket" ></textarea></td>
+        </tr>
+        <tr align="center">
+          <td colspan="3">
+            <input type ="button" value="Simpan" onclick="input()">
+            <input type ="reset" value="Batal">
+          </td>
+        </tr>
+      </table>
+
+      <hr>
+
+      <table width="40%" align="center">
+        <tr>
+          <td width="150">Nama Lengkap</td>
+          <td>:</td>
+          <td><input type ="text" name="znama"></td>
+        </tr>
+        <tr>
+          <td>Kota Asal</td>
+          <td>:</td>
+          <td><input type ="text" name="zkota"></td>
+        </tr>
+        <tr>
+          <td>Jenis Kelamin</td>
+          <td>:</td>
+          <td><input type ="text" name="zjenis"></td>
+        </tr>
+        <tr>
+          <td>Game Favorite</td>
+          <td>:</td>
+          <td><input type ="text" name="zgame"></td>
+        </tr>
+        <tr>
+          <td>Jurusan</td>
+          <td>:</td>
+          <td><input type ="text" name="zjurusan"></td>
+        </tr>
+        <tr valign="top">
+          <td>Keterangan</td>
+          <td>:</td>
+          <td><textarea cols=40 rows=5 name="zket"></textarea></td>
+        </tr>
+      </table> 
+      <hr>
+    </form>
+  </body>
+</html>
